@@ -37,7 +37,14 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  if (reverse(word).compareTo(word) == 0){
+  String s = "";
+  for(int i = 0; i < word.length(); i++){
+    if(Character.isLetter(word.charAt(i)) == true){
+      s = s + word.charAt(i);
+    }
+  }
+  s = s.toLowerCase();
+  if (reverse(s).compareTo(s) == 0){
     return true;
   }
   return false;
